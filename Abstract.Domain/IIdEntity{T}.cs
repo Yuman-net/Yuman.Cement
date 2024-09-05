@@ -1,11 +1,15 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿// <copyright file="IIdEntity{T}.cs" company="Andrey Nikolaev">
+// Copyright (c) Andrey Nikolaev. All rights reserved.
+// </copyright>
 
-namespace Abstract.Domain
+namespace Domain.Entities.Abstractions
 {
+    using System;
+    using System.Collections.Generic;
+    using System.Linq;
+    using System.Text;
+    using System.Threading.Tasks;
+
     /// <summary>
     /// Сущность с идентификатором.
     /// </summary>
