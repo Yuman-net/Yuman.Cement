@@ -18,3 +18,4 @@ namespace Abstract.Domain
         /// </summary>
         public T Id { get; set; }
     }
+}
