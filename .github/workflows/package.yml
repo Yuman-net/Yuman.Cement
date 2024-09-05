@@ -25,7 +25,7 @@ jobs:
       run: dotnet build --configuration Release --no-restore
 
     - name: Pack project
-      run: dotnet pack --configuration Release --no-build --output ./nupkgs
+      run: dotnet pack Yuman.Cement/Yuman.Cement.csproj --configuration Release --output ./nupkgs
 
     - name: Publish NuGet package
       env:
