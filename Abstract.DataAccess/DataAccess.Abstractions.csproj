@@ -3,7 +3,7 @@
   <PropertyGroup>
     <TargetFramework>net8.0</TargetFramework>
     <PackageId>DataAccess.Abstractions</PackageId>
-    <Version>1.0.0</Version>
+    <Version>1.0.1</Version>
     <Authors>Andrey Nikolaev</Authors>
     <Description>Abstract classes for dataAccess.</Description>
     <PackageProjectUrl>https://github.com/Yuman-net/Yuman.Cement</PackageProjectUrl>
