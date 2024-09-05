@@ -24,8 +24,14 @@ jobs:
     - name: Build project
       run: dotnet build --configuration Release --no-restore
 
-    - name: Pack project
-      run: dotnet pack Abstract.Domain/Abstract.Domain.csproj --configuration Release --output ./nupkgs
+    - name: Pack Entities
+      run: dotnet pack Abstract.Domain/Domain.Entities.Abstractions.csproj --configuration Release --output ./nupkgs
+
+    - name: Pack DataAccess
+      run: dotnet pack Abstract.DataAccess/DataAccess.Abstractions.csproj ---configuration Release --output ./nupkgs
+
+    - name: Pack Models
+      run: dotnet pack Models.Abstractinos/Models.Abstractions.csproj ---configuration Release --output ./nupkgs
 
     - name: Publish NuGet package
       env:
