@@ -18,6 +18,16 @@ jobs:
       with:
         dotnet-version: '8.0.x'
 
+    - name: Create NuGet.config
+          run: |
+            echo '<?xml version="1.0" encoding="utf-8"?>
+            <configuration>
+              <packageSources>
+                <add key="GitHub" value="https://nuget.pkg.github.com/Yuman/index.json" />
+              </packageSources>
+            </configuration>' > NuGet.config
+
+
     - name: Restore dependencies
       run: dotnet restore
 
