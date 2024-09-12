@@ -23,7 +23,7 @@ jobs:
         echo '<?xml version="1.0" encoding="utf-8"?>
         <configuration>
           <packageSources>
-            <add key="GitHub" value="https://nuget.pkg.github.com/Yuman/index.json" />
+            <add key="GitHub" value="https://nuget.pkg.github.com/Yuman-net/index.json" />
           </packageSources>
         </configuration>' > NuGet.config
         
