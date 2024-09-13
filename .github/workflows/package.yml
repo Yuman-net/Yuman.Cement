@@ -46,4 +46,4 @@ jobs:
       env:
         PKG_SECRET: ${{ secrets.PKG_SECRET }}
       run: |
-        dotnet nuget push ./nupkgs/*.nupkg --source "GitHub" --api-key $PKG_SECRET
+        dotnet nuget push ./nupkgs/*.nupkg --source "GitHub" --api-key $PKG_SECRET --skip-duplicate
