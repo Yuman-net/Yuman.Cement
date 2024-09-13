@@ -31,7 +31,7 @@ jobs:
       run: dotnet restore
 
     - name: Build project
-      run: dotnet build --configuration Release --no-restore
+      run: dotnet build --configuration Release
 
     - name: Pack Entities
       run: dotnet pack Abstract.Domain/Domain.Entities.Abstractions.csproj --configuration Release --output ./nupkgs
