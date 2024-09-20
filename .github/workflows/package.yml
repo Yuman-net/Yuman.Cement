@@ -27,15 +27,15 @@ jobs:
           </packageSources>
         </configuration>' > NuGet.config
 
-    - name: Update or Add Packages
-      run: |
-        dotnet add Abstract.Domain/Domain.Entities.Abstractions.csproj package Domain.Entities.Abstractions
-        dotnet add Abstract.DataAccess/DataAccess.Abstractions.csproj package DataAccess.Abstractions
-        dotnet add Models.Abstractions/Models.Abstractions.csproj package Models.Abstractions
-        dotnet add Services.Abstractions/Services.Abstractions.csproj package Services.Abstractions
+    ##- name: Update or Add Packages
+      ##run: |
+        ##dotnet add Abstract.Domain/Domain.Entities.Abstractions.csproj package Domain.Entities.Abstractions
+        ##dotnet add Abstract.DataAccess/DataAccess.Abstractions.csproj package DataAccess.Abstractions
+        ##dotnet add Models.Abstractions/Models.Abstractions.csproj package Models.Abstractions
+        ##dotnet add Services.Abstractions/Services.Abstractions.csproj package Services.Abstractions
 
     - name: Restore dependencies
-      run: dotnet restore --configfile NuGet.config
+      run: dotnet restore --packages ./nupkgs
 
     - name: Build project
       run: dotnet build --configuration Release
