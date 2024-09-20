@@ -4,7 +4,7 @@
     <TargetFramework>net8.0</TargetFramework>
     <PackageId>WebApi.Abstractions</PackageId>
     <Authors>Andrey Nikolaev</Authors>
-    <Version>1.0.0</Version>
+    <Version>1.0.1</Version>
     <Description>Abstract and base controllers with profiles.</Description>
     <PackageProjectUrl>https://github.com/Yuman-net/Yuman.Cement</PackageProjectUrl>
     <ImplicitUsings>enable</ImplicitUsings>
