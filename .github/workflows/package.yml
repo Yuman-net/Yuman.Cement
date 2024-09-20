@@ -28,7 +28,7 @@ jobs:
         </configuration>' > NuGet.config
 
     - name: Restore dependencies
-      run: dotnet restore
+      run: dotnet restore --config-file NuGet.config
 
     - name: Build project
       run: dotnet build --configuration Release
