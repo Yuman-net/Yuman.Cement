@@ -42,6 +42,9 @@ jobs:
     - name: Pack Models
       run: dotnet pack Models.Abstractions/Models.Abstractions.csproj --configuration Release --output ./nupkgs
 
+    - name: Pack Services
+      run: dotnet pack Services.Abstractions/Services.Abstractions.csproj --configuration Release --output ./nupkgs
+
     - name: Publish NuGet package
       env:
         PKG_SECRET: ${{ secrets.PKG_SECRET }}
