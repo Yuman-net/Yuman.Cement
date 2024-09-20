@@ -18,15 +18,6 @@ jobs:
       with:
         dotnet-version: '8.0.x'
 
-   
-
-    ##- name: Update or Add Packages
-      ##run: |
-        ##dotnet add Abstract.Domain/Domain.Entities.Abstractions.csproj package Domain.Entities.Abstractions
-        ##dotnet add Abstract.DataAccess/DataAccess.Abstractions.csproj package DataAccess.Abstractions
-        ##dotnet add Models.Abstractions/Models.Abstractions.csproj package Models.Abstractions
-        ##dotnet add Services.Abstractions/Services.Abstractions.csproj package Services.Abstractions
-
     - name: Configure NuGet
       run: |
         dotnet nuget add source https://nuget.pkg.github.com/Yuman-net/index.json --name GitHub --username and.nik.dev@gmail.com --password ${{ secrets.PKG_SECRET }} --store-password-in-clear-text
@@ -48,6 +39,9 @@ jobs:
 
     - name: Pack Services
       run: dotnet pack Services.Abstractions/Services.Abstractions.csproj --configuration Release --output ./nupkgs
+
+    - name: Pack WebApi
+      run: dotnet pack WebApi.Abstractions/WebApi.Abstractions.csproj --configuration Release --output ./nupkgs
 
     - name: Publish NuGet package
       env:
