@@ -18,14 +18,7 @@ jobs:
       with:
         dotnet-version: '8.0.x'
 
-    - name: Create NuGet.config
-      run: |
-        echo '<?xml version="1.0" encoding="utf-8"?>
-        <configuration>
-          <packageSources>
-            <add key="GitHub" value="https://nuget.pkg.github.com/Yuman-net/index.json" />
-          </packageSources>
-        </configuration>' > NuGet.config
+   
 
     ##- name: Update or Add Packages
       ##run: |
@@ -33,6 +26,10 @@ jobs:
         ##dotnet add Abstract.DataAccess/DataAccess.Abstractions.csproj package DataAccess.Abstractions
         ##dotnet add Models.Abstractions/Models.Abstractions.csproj package Models.Abstractions
         ##dotnet add Services.Abstractions/Services.Abstractions.csproj package Services.Abstractions
+
+    - name: Configure NuGet
+      run: |
+        dotnet nuget add source https://nuget.pkg.github.com/Yuman-net/index.json --name GitHub --username and.nik.dev@gmail.com --password ${{ secrets.PKG_SECRET }} --store-password-in-clear-text
 
     - name: Restore dependencies
       run: dotnet restore --packages ./nupkgs
