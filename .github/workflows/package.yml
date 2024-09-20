@@ -27,10 +27,6 @@ jobs:
           </packageSources>
         </configuration>' > NuGet.config
 
-    - name: Configure NuGet
-      run: |
-        dotnet nuget add source https://nuget.pkg.github.com/Yuman-net/index.json --name GitHub --username and.nik.dev@gmail.com --password ${{ secrets.PKG_SECRET }} --store-password-in-clear-text
-    
     - name: Restore dependencies
       run: dotnet restore
 
